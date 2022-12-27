@@ -3,11 +3,12 @@ import java.util.Set;
 
 public class ProductList {
 
- private static Set<Product> products = new HashSet<>();
+ private  Set<Product> products;
 
 
 
-  public static void addProduct(Product product){
+
+    public  void addProduct(Product product){
       if (products.contains(product)){
           throw new IllegalArgumentException("This product is allready defigned");
       }

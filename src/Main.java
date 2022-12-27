@@ -1,20 +1,27 @@
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
-public class Main extends ProductList {
+public class Main {
     public static void main(String[] args) {
 
         Set<Product> products = new HashSet<>();
+        
+        Product milk = new Product("Молоко",10,10);
+        Product bread = new Product("Хлеб",10,10);
+        Product bananas = new Product("Бананы",10,10);
+        
+        products.add(milk);
+        products.add(bread);
+        products.add(bananas);
 
-        addProduct(new Product("Молоко",10,10));
-        addProduct(new Product("Хлеб",10,10));
-        addProduct(new Product("Бананы",10,10));
+        System.out.println("Products is have: " + products);
 
-        Set<Resipe> resipes = new HashSet<>();
+        Recipe recipe = new Recipe("Olivie",100,  products);
+        System.out.println("Recipe is have: " +recipe);
 
-//        addResipe(new Resipe())
+        Set<Recipe> recipeList = new HashSet<>();
+
+
+
 
         Random random = new Random();
         Set<Integer> numbers = new HashSet<>();

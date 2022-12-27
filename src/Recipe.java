@@ -1,25 +1,26 @@
 import java.util.Objects;
+import java.util.Set;
 
-public class Resipe {
+public class Recipe  {
 
-    private ProductList productList;
+    private Set<Product> productList;
 
     private int totalCost;
 
     private String name;
 
-    public Resipe(String name, int totalCost, ProductList productList) {
+    public Recipe(String name, int totalCost, Set<Product> productList) {
         setName(name);
         setProductList(productList);
         setTotalCost(totalCost);
 
     }
 
-    public ProductList getProductList() {
+    public Set<Product> getProductList() {
         return productList;
     }
 
-    public void setProductList(ProductList productList) {
+    public void setProductList(Set<Product> productList) {
         this.productList = productList;
     }
 
@@ -42,8 +43,8 @@ public class Resipe {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Resipe)) return false;
-        Resipe resipe = (Resipe) o;
+        if (!(o instanceof Recipe)) return false;
+        Recipe resipe = (Recipe) o;
         return Objects.equals(getName(), resipe.getName());
     }
 
@@ -51,4 +52,14 @@ public class Resipe {
     public int hashCode() {
         return Objects.hash(getName());
     }
+
+    @Override
+    public String toString() {
+        return "Recipe{" +
+                "productList=" + productList +
+                ", totalCost=" + totalCost +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
+
