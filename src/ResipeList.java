@@ -12,7 +12,7 @@ public class ResipeList {
             throw new IllegalArgumentException("This resipe is allready defigned");
         }
         recipes.add(recipe);
-        System.out.println(recipe);
+        System.out.println("Vi dobavili v spisok receptov: "+recipe);
     }
     public void removeResipe(Recipe resipe) {
         recipes.remove(resipe);

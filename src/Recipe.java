@@ -12,7 +12,7 @@ public class Recipe  {
     public Recipe(String name, int totalCost, Set<Product> productList) {
         setName(name);
         setProductList(productList);
-        setTotalCost(totalCost);
+  //      setTotalCost(totalCost);
 
     }
 
@@ -28,7 +28,7 @@ public class Recipe  {
         return totalCost;
     }
 
-    public void setTotalCost(int totalCost) {
+    public void setTotalCost() {
         this.totalCost = totalCost;
     }
 
@@ -44,8 +44,8 @@ public class Recipe  {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Recipe)) return false;
-        Recipe resipe = (Recipe) o;
-        return Objects.equals(getName(), resipe.getName());
+        Recipe recipe = (Recipe) o;
+        return Objects.equals(getName(), recipe.getName());
     }
 
     @Override
@@ -55,11 +55,7 @@ public class Recipe  {
 
     @Override
     public String toString() {
-        return "Recipe{" +
-                "productList=" + productList +
-                ", totalCost=" + totalCost +
-                ", name='" + name + '\'' +
-                '}';
+        return getName();
     }
 }
 
